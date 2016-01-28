@@ -10,6 +10,12 @@ def prompt(msg)
   puts"=> #{msg}"
 end
 
+def joinor(arr, delimiter, word='or')
+  arr[-1] = "#{word} #{arr.last}" if arr.size > 1
+  arr.join(delimiter)
+end
+
+
 # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
 def display_board(brd)
   system 'clear'
@@ -43,7 +49,7 @@ end
 def player_places_piece!(brd)
   square = ''
   loop do
-    prompt "Choose a square (#{empty_squares(brd).join(', ')}):"
+    prompt "Choose a position to place a piece: #{joinor(empty_squares(brd), ', ')}"
     square = gets.chomp.to_i
     break if empty_squares(brd).include?(square)
     prompt "Sorry, that's not a valid choice."
@@ -53,8 +59,36 @@ def player_places_piece!(brd)
 end
 
 def computer_places_piece!(brd)
-  square = empty_squares(brd).sample
+  square = nil
+
+  # offense
+  if !square
+    WINNING_LINES.each do |line|
+      square = find_at_risk_square(line, brd, COMPUTER_MARKER)
+      break if square
+    end
+  end
+
+  # defense first
+  WINNING_LINES.each do |line|
+    square = find_at_risk_square(line, brd, PLAYER_MARKER)
+    break if square
+  end
+
+  # just pick a square
+  if !square
+    square = empty_squares(brd).sample
+  end
+
   brd[square] = COMPUTER_MARKER
+end
+
+def find_at_risk_square(line, board, marker)
+  if board.values_at(*line).count(marker) == 2
+    board.select{|k,v| line.include?(k) && v == INITIAL_MARKER}.keys.first
+  else
+    nil
+  end
 end
 
 def board_full?(brd)
@@ -94,7 +128,8 @@ loop do
   end
 
   display_board(board)
-
+  player = ' '
+  computer = ' '
   if someone_won?(board)
     prompt "#{detect_winner(board)} won!"
   else
