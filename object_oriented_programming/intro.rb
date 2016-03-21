@@ -42,46 +42,46 @@
 #----------------------------------------------------------
 # Inheritance
 
-class Pet
-  def run
-    'running!'
-  end
+# class Pet
+#   def run
+#     'running!'
+#   end
 
-  def jump
-    'jumping!'
-  end
-end
+#   def jump
+#     'jumping!'
+#   end
+# end
 
-class Dog < Pet
-  def speak
-    'bark!'
-  end
+# class Dog < Pet
+#   def speak
+#     'bark!'
+#   end
 
-  def fetch
-    'fetching!'
-  end
+#   def fetch
+#     'fetching!'
+#   end
 
-  def swim
-    'swimming!'
-  end
-end
+#   def swim
+#     'swimming!'
+#   end
+# end
 
-class Cat < Pet
-  def speak
-    'meow!'
-  end
-end
+# class Cat < Pet
+#   def speak
+#     'meow!'
+#   end
+# end
 
-class Bulldog < Dog
-  def swim
-    "can't swim!"
-  end
-end
+# class Bulldog < Dog
+#   def swim
+#     "can't swim!"
+#   end
+# end
 
-teddy = Dog.new
-puts teddy.speak           # => "bark!"
-puts teddy.swim           # => "swimming!"
+# teddy = Dog.new
+# puts teddy.speak           # => "bark!"
+# puts teddy.swim           # => "swimming!"
 
-karl = Bulldog.new
-puts karl.speak           # => "bark!"
-puts karl.swim            # => "can't swim!"
+# karl = Bulldog.new
+# puts karl.speak           # => "bark!"
+# puts karl.swim            # => "can't swim!"
