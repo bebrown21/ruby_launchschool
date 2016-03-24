@@ -5,7 +5,7 @@
 # bob = Person.new
 # bob.name = 'bob'
 
-# p bob.name
+# bob.name
 
 # Error: Undefined method 'name='
 # Why 'name='and not just 'name'
@@ -20,3 +20,4 @@ end
 
 bob = Person.new
 p bob.name=('bob')  # 'name=' is actually a setter method
+
