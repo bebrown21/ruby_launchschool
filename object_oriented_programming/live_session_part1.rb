@@ -21,3 +21,6 @@ end
 bob = Person.new
 p bob.name=('bob')  # 'name=' is actually a setter method
 
+# Study self and symbols
+# puts calls to_s, p calls .inspect
+# return vs output 
