@@ -56,15 +56,6 @@
 
 # puts dream_team.inspect
 
-result = {}
-roster = {
-      5 => ['Kyle'],
-      4 => %w(Christopher Jennifer),
-      6 => ['Kareem']
-    }
-    
-roster.keys.sort.each do |key|
-  result[key] = roster[key].sort
-end
-
-p result
+str = "John Doe"
+p str.split.first
+p str.split.last
