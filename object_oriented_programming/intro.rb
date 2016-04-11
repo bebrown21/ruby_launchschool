@@ -85,3 +85,42 @@
 # karl = Bulldog.new
 # puts karl.speak           # => "bark!"
 # puts karl.swim            # => "can't swim!"
+
+# class Person
+#   attr_accessor :first_name, :last_name
+  
+#   def initialize(full_name)
+#     @name = name
+#   end
+  
+#   def first_name
+#     name.split.first
+#   end 
+  
+#   def last_name
+#     name + name.split.last
+#   end
+# end
+
+# bob = Person.new('Robert')
+# p bob.name                  # => 'Robert'
+# p bob.first_name            # => 'Robert'
+# p bob.last_name             # => ''
+# p bob.last_name = 'Smith'
+# p bob.name                  # => 'Robert Smith'
+
+
+def compare(str, flag)
+  after = case flag
+          when :upcase
+            str.upcase
+          when :capitalize
+            str.capitalize
+          end
+end
+
+p compare("hello", :upcase)
+
+# Before: hello
+# After: HELLO
+# => nil
