@@ -8,10 +8,6 @@ def to_currency(num)
   p "$" + result
 end
 
-
-
-
-
 to_currency("100000")       # => "$100,000.00"
 to_currency("3456789879.1") # => "$3,456,789,879.10"
 to_currency("12343.43")     # => "$12,343.43"
