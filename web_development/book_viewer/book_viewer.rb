@@ -57,8 +57,6 @@ not_found do
   redirect "/"
 end
 
-
-=======
 require "sinatra/reloader"
 
 get "/" do
