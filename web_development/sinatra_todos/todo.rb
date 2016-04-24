@@ -45,6 +45,20 @@ helpers do
     max = todos.map { |todo| todo[:id] }.max || 0
     max + 1
   end
+  
+  def load_list(id)
+    list = session[:lists].find{ |list| list[:id] == id }
+    return list if list
+  
+    session[:error] = "The specified list was not found."
+    redirect "/lists"
+    halt
+  end
+
+  def next_element_id(elements)
+    max = elements.map { |todo| todo[:id] }.max || 0
+    max + 1
+  end
 end
 
 def error_for_list_name(name)
@@ -125,11 +139,11 @@ end
 # Delete a todo list
 post "/lists/:id/destroy" do
   id = params[:id].to_i
-  session[:lists].delete_at(id)
+  session[:lists].reject! { |list| list[:id] == id }
+  session[:success] = "The list has been deleted."
   if env["HTTP_X_REQUESTED_WITH"] == "XMLHttpRequest"
     "/lists"
   else
-    session[:success] = "The list has been deleted."
     redirect "/lists"
   end
 end
@@ -145,7 +159,7 @@ post "/lists/:list_id/todos" do
     session[:error] = error
     erb :list, layout: :layout
   else
-    id = next_todo_id(@list[:todos])
+    id = next_element_id(@list[:todos])
     @list[:todos] << { id: id, name: text, completed: false }
 
     session[:success] = "The todo was added."
