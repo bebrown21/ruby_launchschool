@@ -1,0 +1,11 @@
+<h1>This is <%= @user_name %>'s page</h1>
+
+<h3>Email: <%= @email %></h3>
+
+<h3>Interests: <%= @interests.join(", ") %></h3>
+
+<% @users.keys.each do |name|  %>
+  <% unless name == @user_name %>
+    <a href="/<%= name %>"><%= name %></a>
+  <% end %>
+<% end %>

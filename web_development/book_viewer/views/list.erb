@@ -1,0 +1,11 @@
+<!-- views/list.erb -->
+<ul>
+    <% @files.each do |file| %>
+    <li>
+      <a href="<%= file %>"><%= file %></a>
+    </li>
+    <% end %>
+</ul>
+
+<a href="/">Sort Ascending</a>
+<a href="/?sort=desc">Sort Descending</a>

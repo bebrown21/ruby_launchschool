@@ -1,6 +1,4 @@
 # users.rb
-require "yaml"
-
 require 'sinatra'
 require 'sinatra/reloader'
 require 'tilt/erubis'
@@ -17,8 +15,9 @@ helpers do
   end
 end
 
+
 get "/" do
-  redirect "/users"
+ redirect "/users"
 end
 
 get "/users" do

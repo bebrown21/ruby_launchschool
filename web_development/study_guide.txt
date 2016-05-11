@@ -1,0 +1,81 @@
+Study Guide
+
+HTTP
+
+1.) Describe what HTTP is and the role of the request and the response.
+HTTP, Hypertext Transfer Protocol, is a system of rules that serves as a link between applications. It's an agreement, message format,
+of how machines communicate. 
+1.) client makes a request to a server
+2.) client waits for a response.
+(refered to as a request response protocol)
+
+2.) What are the components of an HTTP request and an HTTP response?
+HTTP Request consists of: URL, parameters, headers, message body for POST requests. Only the method and URL or path are required.
+()Parameters, headers, and body are optional.)
+HTTP Response consists of: status code, headers, and message body which contains raw response data. Most the time, header Content-Type is required
+which tells how the resources should be read. (Headers and body are optional.)
+
+3.) Identify the components of a URL. Construct a URL that contains a few params and values.
+URL has 3 components: URL scheme (http), the host (www.amazon.com), and the URL path (parameters)
+http:// www.amazon.com ?car=mazda&color=red
+
+4.) Explain the difference between GET and POST, and know when to choose each.
+A GET method request retrieves resources
+A POST method request is used when you want to initiate some action on the server or send data.
+
+GET requests should only retrieve content from the server. They can generally be thought of as "read only" operations, 
+although there are some subtle exceptions to this rule. For example, consider a webpage that tracks how many times it is viewed. 
+GET is still appropriate since the main content of the page doesn't change.
+
+POST requests involve changing values that are stored on the server. Most HTML forms that submit their values to the server will use POST. 
+Search forms are a noticeable exception to this rule, and they often use GET since they are not changing any data on the server, only viewing it.
+
+5.) What is the difference between client-side and server-side code? For each file in a Sinatra project, be able to say which it is.
+
+
+
+Web
+
+1.) How does an HTML form element interact with the server-side code that processes it.
+
+
+2.) Why is user-entered content a security risk? Be aware of how to mitigate this risk.
+
+
+
+Sinatra
+
+Start a new Sinatra project and write simple routes to handle requests.
+
+
+What are the benefits of using view templates? Be able to use an ERB template in a Sinatra route.
+
+
+What is the session? Where it is stored? How it is used?
+
+
+Write a view helper and use it within a view template.
+
+
+Explain how redirection works and why it would be needed in a web application.
+
+
+
+SQL
+
+What is a relational database?
+
+
+Describe the difference between a schema and the data it holds.
+
+
+Compose SELECT statements that include one or more conditions.
+
+
+Explain what a primary key is and how it is used.
+
+
+Use SELECT to retrieve rows from multiple tables at once.
+
+
+Mark this assignment as complete
