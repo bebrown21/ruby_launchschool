@@ -31,8 +31,32 @@ POST requests involve changing values that are stored on the server. Most HTML f
 Search forms are a noticeable exception to this rule, and they often use GET since they are not changing any data on the server, only viewing it.
 
 5.) What is the difference between client-side and server-side code? For each file in a Sinatra project, be able to say which it is.
+-Gemfile: 
+Server-side. This file is used by Bundler, the Ruby dependency management system, to install libraries need to run the program.
 
+-Ruby files (.rb): 
+Server-side. These files are the core of a Sinatra application. The code within them runs on the server while handling incoming requests.
 
+-Stylesheets (.css): 
+Client-side. The code within these files is interpreted by the web browser (a client) as instructions for how to display a web page.
+
+-JS files (.js): 
+Client-side. The code within these files is evaluated by the JavaScript interpreter within a web browser (a client) to add behavior to a web page.
+
+View Templates (.erb)
+Server-side. The Ruby code within these files is evaluated on the server to generate a response that will then be sent to the client.
+
+But what about the HTML tags within a view template? Aren't those client-side code?
+
+This is a common point of confusion, as these files contain both client-side code (HTML tags) 
+and server-side code (Ruby).
+However, since they must be processed by a program on the server before being sent to the client, 
+the ERB templates we've used in this course are considered to be server-side code.
+
+In fact, the templates we've been using are sometimes referred to as "server side templates" to differentiate them from "client-side templates". 
+Client-side templates are used by rich JavaScript applications to render a template directly on the client, 
+without it needing to first be processed by a server. Don't worry about those for now, though; 
+we'll have plenty of time to deal with them in the front end courses.
 
 Web
 
