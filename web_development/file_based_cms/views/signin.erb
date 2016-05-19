@@ -1,0 +1,13 @@
+<% if session[:message] %>
+  <p class="message"><%= session.delete(:message) %></p>
+<% end %>
+
+<form action="/users/signin" method="post">
+  <label for="username"> Username:<br>
+    <input name="username" type="text" value=""/><br>
+  </label>
+  <label for="password"> Password:<br>
+    <input name="password" type="password" value=""/><br>
+  </label>
+  <button type="submit">Sign In</button>
+</form>
