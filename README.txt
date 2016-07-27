@@ -45,7 +45,7 @@ Course No.	   Name	         	                     Hours	       Status
 
 Electives and Career Services
 
-Course No.	   Name	         	                      Hours	        Status
-401	Career Services			                                    Not started
-410	Data Structures and Algorithm Analysis	               60 - 100	   Not started
-420	Advanced Ruby and Metaprogramming	               60 - 100	   Not started
+Course No.	   Name	         	                     Hours	       Status
+401	Career Services			                                       Not started
+410	Data Structures and Algorithm Analysis	             60 - 100	       Not started
+420	Advanced Ruby and Metaprogramming	             60 - 100	       Not started
