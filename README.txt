@@ -36,12 +36,12 @@ Course No.	   Name	                 	             Hours	      Status
 Frameworks, Integrations and Advanced Topics
 
 Course No.	   Name	         	                     Hours	               Status
-301	Rapid Prototyping with Ruby on Rails		   80 - 120	       Not started
-310	Build Robust and Production Quality Application	   120 - 200	       Not started
-349	Assessment: Advanced Phase Midpoint		 	               Not started
-350	Practical Programming and Automation		   40 - 80	               Not started
-360	Working with Web APIs	349	                   60 - 100	       Not started
-399	Assessment: Full Stack Final	                         	          Not started
+301	Rapid Prototyping with Ruby on Rails		     80 - 120	                Not started
+310	Build Robust and Production Quality Application	     120 - 200	                Not started
+349	Assessment: Advanced Phase Midpoint		 	                        Not started
+350	Practical Programming and Automation		     40 - 80	                Not started
+360	Working with Web APIs	349	                     60 - 100	                Not started
+399	Assessment: Full Stack Final	                         	                Not started
 
 Electives and Career Services
 
