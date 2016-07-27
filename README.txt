@@ -6,7 +6,6 @@ Course Catalog:
 Preparatory Work
 
 Course No.	Name		        Hours	   Status
-
 95	Orientation		        5 - 10	   Completed 
 100	Programming & Back-end Prep	20 - 60	   Completed
 200	Front-end Prep		        20 - 60    Completed
