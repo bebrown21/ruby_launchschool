@@ -28,8 +28,8 @@ Front-end Development
 Course No.	   Name	                 	             Hours	      Status
 201	HTML and CSS	                	             50 - 80	      Completed
 209	Assessment: HTML and CSS		             10	              Completed
-220	JavaScript and Front End Programming	             80 - 120	      Not started
-249	Assessment: Javascript and Front End Programming     15               Not started
+220	JavaScript and Front End Programming	             80 - 120	      Completed
+249	Assessment: Javascript and Front End Programming     15               In progress
 260	Building Applications with Client-Side MVC	     80 - 120	      Not started
 299	Assessment: Front End Development Final		     25	              Not started
 
